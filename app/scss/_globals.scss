@@ -1,0 +1,104 @@
+//CSS RESET
+@import "_variables";
+@import "_mixins";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Raleway', sans-serif;;
+    font-weight: $font-ws;
+
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  // Text
+  h1,
+  h2,
+  h3 {
+    font-weight: $font-wm;
+    line-height: 1.15;
+    margin-top: 0px;
+  }
+  
+  h1 {
+    // font-size: 2.31rem;
+    // margin-bottom: 1.5rem;
+  
+    // @include breakpoint-up(large) {
+    //   font-size: $font-xlg;
+    // }
+  }
+  
+  h2 {
+    // font-size: 1.875rem;
+    // margin-bottom: 1.5625rem;
+  
+    // @include breakpoint-up(large) {
+    //   font-size: 2.25rem;
+    //   margin-bottom: 2.25rem;
+    // }
+  }
+  
+  p {
+    line-height: 1.5;
+    // margin-bottom: 2.25rem;
+  }
+  
+  a,
+  a:visited,
+  a:hover {
+    text-decoration: none;
+  }
+
+  //Spacing
+
+  .container{
+    max-width: 1283px;
+    margin: 0 auto;
+  }
+
+  //flexbox
+  .flex{
+
+    display: flex;
+
+    &-ai-c{
+        align-items: center;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+  }
