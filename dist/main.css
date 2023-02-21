@@ -43,6 +43,24 @@ h3 {
   margin-top: 0px;
 }
 
+h1 {
+  font-size: 2.0625rem;
+  margin: 2.875rem 0;
+  line-height: 1.5;
+}
+@media (min-width: 64em) {
+  h1 {
+    margin-top: 5.375rem;
+    margin-bottom: 2.125rem;
+  }
+}
+@media (max-width: 33.75em) {
+  h1 {
+    font-size: 1.25rem;
+    margin: 2rem 0;
+  }
+}
+
 p {
   line-height: 1.5;
 }
@@ -54,7 +72,7 @@ a:hover {
 }
 
 .container {
-  max-width: 1283px;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -78,28 +96,44 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
-.header .container {
-  border: 2px solid black;
+.flex-fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-@media (min-width: 64em) {
-  .header .container {
-    margin: 62px auto;
-    border: 2px solid red;
+
+.header nav {
+  padding: 2.125rem 2.0625rem;
+}
+@media (min-width: 40em) {
+  .header nav {
+    padding: 3.8125rem 4.875rem;
   }
+}
+.header .container {
+  margin: 0 auto;
 }
 @media (max-width: 39.9375em) {
   .header__logo img {
-    width: 114px;
+    width: 7.125rem;
   }
 }
 .header__links a {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
   color: hsl(238deg, 22%, 44%);
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
+}
+@media (max-width: 33.75em) {
+  .header__links a {
+    font-size: 0.75rem;
+  }
+  .header__links a:not(:last-child) {
+    margin-right: 0.5625rem !important;
+  }
 }
 @media (min-width: 64em) {
   .header__links a:not(:last-child) {
@@ -107,8 +141,140 @@ a:hover {
   }
 }
 .header__links a:not(:last-child) {
-  margin-right: 36px;
+  margin-right: 3.5625rem;
 }
 .header__links a:hover {
   opacity: 0.6;
+}
+
+.hero {
+  padding: 3.125rem 2.0625rem;
+}
+@media (max-width: 39.9375em) {
+  .hero {
+    padding: 3.125rem;
+  }
+}
+@media (min-width: 64em) {
+  .hero {
+    padding-top: 1.625rem;
+  }
+}
+.hero .container {
+  width: 100%;
+  min-height: 54.5rem;
+  padding: 0 0.74rem;
+}
+@media (min-width: 64em) {
+  .hero .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 30.75rem;
+  }
+}
+.hero__image {
+  background-image: url(/images/illustration-1.svg);
+  width: 100%;
+  min-height: 20.375rem;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 64em) {
+  .hero__image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+.hero__text {
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .hero__text {
+    min-width: 35.625rem;
+    text-align: left;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+.hero__text p {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin-bottom: 2.9375rem;
+}
+@media (min-width: 64em) {
+  .hero__text p {
+    margin: 0px;
+    max-width: 83%;
+  }
+}
+.hero__text input {
+  width: 100%;
+  padding: 0.75rem 1.6875rem;
+  border: 1px solid hsl(238deg, 22%, 44%);
+  border-radius: 0.3125rem;
+}
+.hero__text input::-webkit-input-placeholder {
+  font-size: 0.75rem;
+  font-family: "Raleway", sans-serif;
+}
+.hero__text input::-moz-placeholder {
+  font-size: 0.75rem;
+  font-family: "Raleway", sans-serif;
+}
+.hero__text input:-ms-input-placeholder {
+  font-size: 0.75rem;
+  font-family: "Raleway", sans-serif;
+}
+.hero__text input::-ms-input-placeholder {
+  font-size: 0.75rem;
+  font-family: "Raleway", sans-serif;
+}
+.hero__text input::placeholder {
+  font-size: 0.75rem;
+  font-family: "Raleway", sans-serif;
+}
+.hero__text input:focus {
+  outline: none;
+}
+@media (min-width: 64em) {
+  .hero__text input {
+    padding: 0.8125rem 1.125rem;
+    max-width: 19.875rem;
+    margin-right: 1.1875rem;
+  }
+}
+.hero__text a button {
+  width: 100%;
+  background-color: hsl(224deg, 93%, 58%);
+  padding: 0.75rem 0;
+  border: none;
+  margin-top: 1.5rem;
+  border-radius: 0.3125rem;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid hsl(224deg, 93%, 58%);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.hero__text a button:hover {
+  background-color: white;
+  color: hsl(224deg, 93%, 58%);
+}
+@media (min-width: 64em) {
+  .hero__text a button {
+    max-width: 7.4375rem;
+    padding: 0.8125rem;
+    font-size: 0.8125rem;
+  }
 }

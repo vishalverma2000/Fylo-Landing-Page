@@ -3,24 +3,26 @@
 
 .header{
 
-    .container{
-        border: 2px solid black;
-        //  min-width: 471px;
-        //  margin: 33px 36px;
+    nav{
+        // border: 2px solid black;
+        padding: 2.125rem 2.0625rem;
 
-
-        @include breakpoint-up(large){
-            margin: 62px auto;
-            border: 2px solid red;
+        @include breakpoint-up(medium){
+           padding: 3.8125rem 4.875rem;    
         }
     }
 
+    .container{
+        // border: 2px solid green;
+        margin: 0 auto;
+    }
 
     &__logo{
 
         img{
+            
             @include breakpoint-down(small){
-             width: 114px;
+                width: 7.125rem;
             }
         }
 
@@ -30,10 +32,17 @@
 
         a{
             text-decoration: none;
-            font-size: 15px;
+            font-size: 0.9375rem;
             font-weight: $font-wm;
             color: $desaturatedBlue;
             transition: all 150ms ease-in-out;
+
+            @include breakpoint-down(esmall){
+                    &:not(:last-child){
+                        margin-right: 0.5625rem !important;
+                    }
+                    font-size: 0.75rem;
+            }
 
             @include breakpoint-up(large){
                 &:not(:last-child){
@@ -42,7 +51,7 @@
             }
 
             &:not(:last-child){
-                margin-right: 36px;
+                margin-right: 3.5625rem;
             }
 
             &:hover{
