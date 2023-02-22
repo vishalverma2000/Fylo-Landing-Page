@@ -44,7 +44,7 @@ h3 {
 }
 
 h1 {
-  font-size: 2.0625rem;
+  font-size: 1.9375rem;
   margin: 2.875rem 0;
   line-height: 1.5;
 }
@@ -208,13 +208,18 @@ a:hover {
 }
 .hero__text p {
   font-size: 0.9375rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 2.9375rem;
 }
 @media (min-width: 64em) {
   .hero__text p {
     margin: 0px;
     max-width: 83%;
+  }
+}
+@media (max-width: 33.75em) {
+  .hero__text p {
+    font-size: 12px;
   }
 }
 .hero__text input {
@@ -273,8 +278,100 @@ a:hover {
 }
 @media (min-width: 64em) {
   .hero__text a button {
-    max-width: 7.4375rem;
-    padding: 0.8125rem;
+    max-width: 12.5625rem;
+    padding: 0.8125rem 0;
     font-size: 0.8125rem;
   }
+}
+
+.feature {
+  background-image: url(/images/bg-curve-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: auto center;
+}
+.feature .container {
+  background-color: rgb(249, 248, 254);
+  padding: 116px 33px;
+  position: relative;
+  top: 50px;
+  min-height: 1318px;
+}
+.feature__image {
+  background-image: url(/images/illustration-2.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  min-height: 354px;
+}
+.feature__text h2 {
+  margin-top: 110px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.feature__text p {
+  text-align: left;
+  font-size: 17px;
+}
+.feature__link {
+  position: relative;
+  top: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+  text-align: center;
+}
+.feature__link a {
+  font-size: 13px;
+  color: rgb(85, 168, 153);
+  font-weight: 500;
+  padding-bottom: 10px;
+  margin-bottom: 55px;
+}
+.feature__link a:hover {
+  cursor: pointer;
+  border-bottom: 2px solid rgb(85, 168, 153);
+}
+.feature__link a.fa {
+  margin-left: 6px;
+}
+.feature__comment {
+  background-color: white;
+  max-width: 405px;
+  max-height: 246px;
+  padding: 30px 35px;
+  margin: 0 auto;
+  position: relative;
+  top: 55px;
+}
+.feature__comment .profile {
+  margin-top: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+.feature__comment .profile .avatar-img {
+  display: inline-block;
+}
+.feature__comment .profile .avatar-img img {
+  vertical-align: middle;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.feature__comment .profile .avatar-text {
+  display: inline-block;
+}
+.feature__comment .profile .avatar-text span {
+  font-size: 10px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+.feature__comment p {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: justify;
+  line-height: 2;
 }
