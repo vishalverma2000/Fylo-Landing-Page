@@ -63,21 +63,22 @@
       margin: 2rem 0;
     }
   }
-  
-  h2 {
-    // font-size: 1.875rem;
-    // margin-bottom: 1.5625rem;
-  
-    // @include breakpoint-up(large) {
-    //   font-size: 2.25rem;
-    //   margin-bottom: 2.25rem;
-    // }
+
+p{  
+  // border: 2px solid blue;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  margin-bottom: 2.9375rem;
+
+  @include breakpoint-up(large){
+      margin: 0px;
+      max-width: 83%;
   }
-  
-  p {
-    line-height: 1.5;
-    // margin-bottom: 2.25rem;
+
+  @include breakpoint-down(esmall){
+      font-size: 12px;
   }
+}
   
   a,
   a:visited,

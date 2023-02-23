@@ -11,9 +11,8 @@
       }
 
      .container{
-    //    border: 2px solid red; 
        width: 100%;
-       min-height: 54.5rem;
+       min-height: 51.5rem;
        padding: 0 0.74rem;
          
        @include breakpoint-up(large){
@@ -49,22 +48,6 @@
             order: 1;
         }
 
-        p{  
-
-            // border: 2px solid blue;
-            font-size: 0.9375rem;
-            font-weight: 400;
-            margin-bottom: 2.9375rem;
-
-            @include breakpoint-up(large){
-                margin: 0px;
-                max-width: 83%;
-            }
-
-            @include breakpoint-down(esmall){
-                font-size: 12px;
-            }
-        }
 
         input{
             width: 100%;

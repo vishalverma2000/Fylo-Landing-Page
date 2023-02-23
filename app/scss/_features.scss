@@ -1,16 +1,36 @@
 .feature{
-    // border: 2px solid green;
+    max-width: 100%;
     background-image: url(/images/bg-curve-mobile.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: auto center;
+    padding-top: 50px;
+    height: 1300px;
+    
+    @include breakpoint-up(large){
+        background-image: url(/images/bg-curve-desktop.svg);
+        padding-top: 99px;
+        max-height: 782px;
+    }
+
+    &__overlay{
+        background-color: rgb(249, 248, 254);
+        height: 100%;
+        padding: 50px;
+
+        @include breakpoint-up(large){
+            padding: 0;
+        }
+    }
 
     .container{
-        background-color: rgb(249, 248, 254);
-        padding: 116px 33px;
-        position: relative;
-        top: 50px;
-        min-height: 1318px;
+        height: 1140px;
+
+        @include breakpoint-up(large){
+            display: flex;
+            justify-content: center;
+            height: 571px;
+        }
     }
 
     &__image{
@@ -19,20 +39,30 @@
        background-position: center center;
        background-size: contain;
        min-height: 354px;
+
+       @include breakpoint-up(large){
+          flex: 1;
+          order: 2;
+       }
     }
 
     &__text{
-   
+        
+        p{ 
+            @include breakpoint-down(small){
+            margin-bottom: 0.9375rem;
+        }
+}
 
-        h2{
-            margin-top: 110px;
-            margin-bottom: 40px;
-            text-align: center;
+        @include breakpoint-up(large){
+            flex: 1;
+            order: 1;
         }
 
-        p{
-            text-align: left;
-            font-size: 17px;
+        h1{
+            @include breakpoint-up(large){
+                margin-top: 2.375rem;
+            }
         }
     }
 
@@ -43,6 +73,11 @@
         transform: translateX(-50%);
         display: inline-block;
         text-align: center;
+
+        @include breakpoint-up(large){
+            top: 23px;
+            transform: translateX(-315px);
+        }
         
         a{  
             font-size: 13px;
@@ -64,14 +99,19 @@
     }
 
     &__comment{
-        // border: 2px solid green;
+        box-shadow:  -3px 4px 11px #888888;
         background-color: white;
         max-width: 405px;
-        max-height: 246px;
+        max-height: 270px;
         padding: 30px 35px;
         margin: 0 auto;
         position: relative;
         top: 55px;
+
+        @include breakpoint-up(large){
+            right: 111px;
+            top: 58px
+        }
 
         .profile{
             margin-top: 21px;
