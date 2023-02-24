@@ -1,153 +1,125 @@
-.feature{
-    max-width: 100%;
-    background-image: url(/images/bg-curve-mobile.svg);
+.feature {
+  border: 2px solid red;
+  height: 78.6875rem;
+  background-image: url(/images/bg-curve-mobile.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 3.125rem;
+
+  @include breakpoint-up(large) {
+    background-image: url(/images/bg-curve-desktop.svg);
+    padding-top: 6.25rem;
+    height: 52.8125rem;
+  }
+
+  &__overlay {
+    bottom: 6.25rem;
+    height: 100%;
+    background-color: rgb(249 249 254);
+
+    @include breakpoint-up(large) {
+      min-height: 44.375rem;
+    }
+  }
+
+  .container {
+    padding-top: 5.1875rem;
+    text-align: center;
+
+    @include breakpoint-up(large) {
+      display: flex;
+      padding: 0;
+    }
+  }
+
+  &__image {
+    background-image: url(/images/illustration-2.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: auto center;
-    padding-top: 50px;
-    height: 1300px;
-    
-    @include breakpoint-up(large){
-        background-image: url(/images/bg-curve-desktop.svg);
-        padding-top: 99px;
-        max-height: 782px;
+    background-position: center;
+    min-height: 21rem;
+    width: auto;
+    margin: 0 auto;
+
+    @include breakpoint-up(large) {
+      flex: 1;
+      order: 2;
+    }
+  }
+
+  &__text {
+    @include breakpoint-up(large) {
+      flex: 1;
+      order: 1;
+      text-align: left;
     }
 
-    &__overlay{
-        background-color: rgb(249, 248, 254);
-        height: 100%;
-        padding: 50px;
+    P {
+      text-align: left;
+    }
+    h1 {
+      margin-top: 5.3125rem;
 
-        @include breakpoint-up(large){
-            padding: 0;
-        }
+      @include breakpoint-up(large) {
+        font-size: 1.8125rem;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 3.125rem 0;
+
+    &:hover {
+      border-bottom: 1px solid rgb(58, 159, 141);
     }
 
-    .container{
-        height: 1140px;
+    a {
+      color: rgb(58, 159, 141);
+      font-size: 0.875rem;
+    }
+  }
 
-        @include breakpoint-up(large){
-            display: flex;
-            justify-content: center;
-            height: 571px;
-        }
+  &__comment {
+    background-color: white;
+    box-shadow: 2px 2px 11px #888888;
+    padding: 1.75rem 2.3125rem;
+    text-align: justify;
+    border-radius: 0.3125rem;
+    width: 21.25rem;
+    margin: 0 auto;
+
+    @include breakpoint-up(large) {
+      margin: 0;
     }
 
-    &__image{
-       background-image: url(/images/illustration-2.svg);
-       background-repeat: no-repeat;
-       background-position: center center;
-       background-size: contain;
-       min-height: 354px;
-
-       @include breakpoint-up(large){
-          flex: 1;
-          order: 2;
-       }
+    p {
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 2;
     }
 
-    &__text{
-        
-        p{ 
-            @include breakpoint-down(small){
-            margin-bottom: 0.9375rem;
-        }
-}
+    .profile {
+      display: flex;
+      margin-top: 1.4375rem;
+      align-items: center;
 
-        @include breakpoint-up(large){
-            flex: 1;
-            order: 1;
+      .avatar-text {
+        span {
+          font-size: 0.625rem;
         }
-
-        h1{
-            @include breakpoint-up(large){
-                margin-top: 2.375rem;
-            }
-        }
+      }
     }
 
-    &__link{
-        position: relative;
-        top: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: inline-block;
-        text-align: center;
-
-        @include breakpoint-up(large){
-            top: 23px;
-            transform: translateX(-315px);
-        }
-        
-        a{  
-            font-size: 13px;
-            color: rgb(85, 168, 153);
-            font-weight: 500;
-            padding-bottom: 10px;
-            margin-bottom: 55px;
-
-            &:hover{
-                cursor: pointer;
-                border-bottom: 2px solid rgb(85, 168, 153);
-            }
-
-            &.fa{
-                margin-left: 6px;
-            }
-           
-        }
+    .avatar-img {
+      img {
+        vertical-align: middle;
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 50%;
+        margin-right: 0.625rem;
+      }
     }
-
-    &__comment{
-        box-shadow:  -3px 4px 11px #888888;
-        background-color: white;
-        max-width: 405px;
-        max-height: 270px;
-        padding: 30px 35px;
-        margin: 0 auto;
-        position: relative;
-        top: 55px;
-
-        @include breakpoint-up(large){
-            right: 111px;
-            top: 58px
-        }
-
-        .profile{
-            margin-top: 21px;
-
-            display: flex;
-            gap: 5px;
-
-            .avatar-img{
-                display: inline-block;
-
-                
-                img{
-                    vertical-align: middle;
-                    width: 45px;
-                    height: 45px;
-                    border-radius: 50%;
-                }
-
-            }
-            .avatar-text{
-                display: inline-block;
-
-                span{
-                    font-size: 10px;
-                    font-weight: 500;
-                    opacity: 0.7;
-                }
-            }
-        }
-
-        p{
-            font-size: 12px;
-            font-weight: 700;
-            text-align: justify;
-            line-height: 2;
-        }
-
-    }
+  }
 }

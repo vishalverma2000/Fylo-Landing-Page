@@ -2,115 +2,153 @@
 @import "_variables";
 @import "_mixins";
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Raleway", sans-serif;
+  font-weight: $font-ws;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+// Typography
+
+h1,
+h2,
+h3 {
+  font-weight: $font-wm;
+  line-height: 1.15;
+  margin-top: 0px;
+}
+
+h1 {
+  font-size: 1.9375rem;
+  line-height: 1.5;
+
+  @include breakpoint-up(large) {
+    margin-top: 5.375rem;
+    margin-bottom: 2.125rem;
   }
 
-  * {
-    margin: 0;
-  }
-
-  html, body {
-    height: 100%;
-  }
-
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Raleway', sans-serif;
-    font-weight: $font-ws;
-
-  }
-
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-
-  input, button, textarea, select {
-    font: inherit;
-  }
-
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-
-  #root, #__next {
-    isolation: isolate;
-  }
-
-  // Text
-  h1,
-  h2,
-  h3 {
-    font-weight: $font-wm;
-    line-height: 1.15;
-    margin-top: 0px;
-  }
-  
-  h1 {
-    font-size: 1.9375rem;
-    margin: 2.875rem 0;
-    line-height: 1.5;
-  
-    @include breakpoint-up(large) {
-      margin-top: 5.375rem;
-      margin-bottom: 2.125rem;
-    }
-
-    @include breakpoint-down(esmall) {
-      font-size: 1.25rem;
-      margin: 2rem 0;
-    }
-  }
-
-p{  
-  // border: 2px solid blue;
-  font-size: 0.9375rem;
-  font-weight: 400;
-  margin-bottom: 2.9375rem;
-
-  @include breakpoint-up(large){
-      margin: 0px;
-      max-width: 83%;
-  }
-
-  @include breakpoint-down(esmall){
-      font-size: 12px;
+  @include breakpoint-down(esmall) {
+    font-size: 1.25rem;
+    margin: 2rem 0;
   }
 }
-  
-  a,
-  a:visited,
-  a:hover {
-    text-decoration: none;
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: $desaturatedBlue;
+
+  // @include breakpoint-up(large) {
+  //   margin: 0px;
+  //   max-width: 83%;
+  // }
+
+  // @include breakpoint-down(esmall) {
+  //   font-size: 12px;
+  // }
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+//Spacing
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+
+  &-p-lr {
+    padding: 0 2.0625rem;
+  }
+}
+
+//flexbox
+.flex {
+  display: flex;
+
+  &-ai-c {
+    align-items: center;
   }
 
-  //Spacing
-
-  .container{
-    max-width: 80rem;
-    margin: 0 auto;
+  &-jc-c {
+    justify-content: center;
   }
 
-  //flexbox
-  .flex{
-
-    display: flex;
-
-    &-ai-c{
-        align-items: center;
-    }
-
-    &-jc-c{
-        justify-content: center;
-    }
-
-    &-jc-sb{
-        justify-content: space-between;
-    }
-
-    &-fd-c{
-      flex-direction: column;
-    }
+  &-jc-sb {
+    justify-content: space-between;
   }
+
+  &-fd-c {
+    flex-direction: column;
+  }
+}
+
+// Buttons
+button {
+  width: 100%;
+  background-color: $brightBlue;
+  padding: 0.75rem 0;
+  border: none;
+  margin-top: 1.5rem;
+  border-radius: 0.3125rem;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid $brightBlue;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: white;
+    color: $brightBlue;
+  }
+}

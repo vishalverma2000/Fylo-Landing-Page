@@ -1,62 +1,57 @@
 @import "_variables";
 @import "_mixins";
 
-.header{
+.header {
+  nav {
+    // border: 2px solid black;
+    padding: 2.125rem 2.0625rem;
 
-    nav{
-        // border: 2px solid black;
-        padding: 2.125rem 2.0625rem;
+    @include breakpoint-up(medium) {
+      padding: 3.8125rem 4.875rem;
+    }
+  }
 
-        @include breakpoint-up(medium){
-           padding: 3.8125rem 4.875rem;    
+  .container {
+    // border: 2px solid green;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    img {
+      @include breakpoint-down(small) {
+        width: 7.125rem;
+      }
+    }
+  }
+
+  &__links {
+    a {
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: $font-wm;
+      color: $desaturatedBlue;
+      transition: all 150ms ease-in-out;
+
+      @include breakpoint-down(esmall) {
+        &:not(:last-child) {
+          margin-right: 0.5625rem !important;
         }
-    }
+        font-size: 0.75rem;
+      }
 
-    .container{
-        // border: 2px solid green;
-        margin: 0 auto;
-    }
-
-    &__logo{
-
-        img{
-            
-            @include breakpoint-down(small){
-                width: 7.125rem;
-            }
+      @include breakpoint-up(large) {
+        &:not(:last-child) {
+          margin-right: 57px !important;
         }
+      }
 
+      &:not(:last-child) {
+        margin-right: 3.5625rem;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
     }
-
-    &__links{
-
-        a{
-            text-decoration: none;
-            font-size: 0.9375rem;
-            font-weight: $font-wm;
-            color: $desaturatedBlue;
-            transition: all 150ms ease-in-out;
-
-            @include breakpoint-down(esmall){
-                    &:not(:last-child){
-                        margin-right: 0.5625rem !important;
-                    }
-                    font-size: 0.75rem;
-            }
-
-            @include breakpoint-up(large){
-                &:not(:last-child){
-                    margin-right: 57px !important;
-                }
-            }
-
-            &:not(:last-child){
-                margin-right: 3.5625rem;
-            }
-
-            &:hover{
-                opacity: 0.6;
-            }
-        }
-    }
+  }
 }
