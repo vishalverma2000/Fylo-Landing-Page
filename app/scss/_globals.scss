@@ -72,6 +72,7 @@ h1 {
   @include breakpoint-up(large) {
     margin-top: 5.375rem;
     margin-bottom: 2.125rem;
+    font-size: 1.8125rem;
   }
 
   @include breakpoint-down(esmall) {
@@ -86,13 +87,12 @@ p {
   color: $desaturatedBlue;
 
   // @include breakpoint-up(large) {
-  //   margin: 0px;
   //   max-width: 83%;
   // }
 
-  // @include breakpoint-down(esmall) {
-  //   font-size: 12px;
-  // }
+  @include breakpoint-down(esmall) {
+    font-size: 12px;
+  }
 }
 
 a,
@@ -135,7 +135,7 @@ a:hover {
 
 // Buttons
 button {
-  width: 100%;
+  // width: 100%;
   background-color: $brightBlue;
   padding: 0.75rem 0;
   border: none;
@@ -150,5 +150,13 @@ button {
   &:hover {
     background-color: white;
     color: $brightBlue;
+  }
+
+  @include breakpoint-up(large) {
+    min-width: 200px;
+  }
+
+  @include breakpoint-down(small) {
+    min-width: 100%;
   }
 }
